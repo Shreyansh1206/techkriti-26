@@ -1,22 +1,34 @@
 import React from 'react';
 import './PastEvents.css';
 
-import demoImage from '../assets/demo.jpeg';
+
+import image1 from '../assets/army2.jpg';
+import image2 from '../assets/cds.jpg';
+import image3 from '../assets/drill_.jpeg';
+import image4 from '../assets/expo3.jpg';
+import image5 from '../assets/JNT04240.jpg';
+import image6 from '../assets/JNT04307.jpg';
+import image7 from '../assets/JNT04314.jpg';
+import image8 from '../assets/JNT04559.jpg';
+import image9 from '../assets/PAT00571.jpg';
+import image10 from '../assets/PAT09183.jpg';
+import image11 from '../assets/robo6.jpg';
+import image12 from '../assets/sonu.jpg';
 
 // Generate a list of items to populate the cylinder
 const RAW_IMAGES = [
-  demoImage,
-  demoImage,
-  demoImage,
-  demoImage,
-  demoImage,
-  demoImage,
-  demoImage,
-  demoImage,
-  demoImage,
-  demoImage,
-  demoImage,
-  demoImage,
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+  image9,
+  image10,
+  image11,
+  image12,
 ];
 
 // Use exactly the defined items
