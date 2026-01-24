@@ -5,8 +5,12 @@
   --background-color: #140f24;
   --cylinder-radius: 850px;
   --card-width: 400px;
-  --card-height: 550px;
-  --anim-duration: 60s;
+  --card-height: 600px;
+  --anim-duration: 50s;
+
+  /* -- Edge Blur Parameters -- */
+  --blur-width: 15%; /* How far into the screen the fade reaches (0% to 50%) */
+  --blur-strength: 4px; /* The intensity of the gaussian blur */
 }
 
 .past-events-section {
@@ -20,7 +24,6 @@
   align-items: center;
   overflow: hidden;
   font-family: "Orbitron", "Inter", sans-serif;
-  /* Perspective removed here, applied to split wrappers instead */
 }
 
 .section-title {
@@ -28,7 +31,6 @@
   z-index: 20;
   color: #eeeeee;
   font-size: 2rem;
-  text-transform: uppercase;
   letter-spacing: 6px;
   margin-bottom: 3rem;
 }
@@ -38,7 +40,6 @@
   position: relative;
   width: 100%;
   height: 600px;
-  /* No perspective here, ensuring the hierarchy starts fresh in split-view */
 }
 
 /* --- Split View Structure --- */
@@ -53,13 +54,11 @@
 
 .left-split {
   left: 0;
-  /* Perspective origin at the right edge (center of screen) */
   perspective-origin: 100% 50%;
 }
 
 .right-split {
   left: 50%;
-  /* Perspective origin at the left edge (center of screen) */
   perspective-origin: 0% 50%;
 }
 
@@ -68,20 +67,19 @@
   position: absolute;
   top: 0;
   height: 100%;
-  width: 0; /* Scene center point */
-  display: flex; /* Centers children */
+  width: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
 }
 
-/* Align carousel center to the split boundary */
 .left-split .carousel-scene {
-  right: 0; /* Align to right edge of left-split (screen center) */
+  right: 0;
 }
 
 .right-split .carousel-scene {
-  left: 0; /* Align to left edge of right-split (screen center) */
+  left: 0;
 }
 
 /* The Rotating Cylinder Ring */
@@ -104,9 +102,7 @@
   margin-left: calc(var(--card-width) / -2);
   margin-top: calc(var(--card-height) / -2);
 
-  /* Concave Transform */
   transform: rotateY(var(--angle)) translateZ(calc(var(--cylinder-radius) * -1));
-
   transform-style: preserve-3d;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -129,6 +125,53 @@
 /* Apply filter only to items in the left split cylinder */
 .cylinder.grayscale-filter .event-img {
   filter: grayscale(100%) brightness(0.7);
+}
+
+/* --- Edge Blur & Fade Overlays --- */
+.edge-overlays {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10; /* Above cards, below center line */
+}
+
+/* 1. The Gaussian Blur (affects cards underneath) */
+.edge-overlays::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(var(--blur-strength));
+  -webkit-backdrop-filter: blur(var(--blur-strength));
+
+  /* Mask ensures blur only applies to the edges */
+  mask-image: linear-gradient(
+    to right,
+    black 0%,
+    transparent var(--blur-width),
+    transparent calc(100% - var(--blur-width)),
+    black 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black 0%,
+    transparent var(--blur-width),
+    transparent calc(100% - var(--blur-width)),
+    black 100%
+  );
+}
+
+/* 2. The Color Fade (seamlessly blends into background) */
+.edge-overlays::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    var(--background-color) 0%,
+    transparent var(--blur-width),
+    transparent calc(100% - var(--blur-width)),
+    var(--background-color) 100%
+  );
 }
 
 /* Center Beam */

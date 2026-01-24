@@ -11,10 +11,16 @@ const RAW_IMAGES = [
   demoImage,
   demoImage,
   demoImage,
+  demoImage,
+  demoImage,
+  demoImage,
+  demoImage,
+  demoImage,
+  demoImage,
 ];
 
-// Double the array to ensure cylinder density
-const CAROUSEL_ITEMS = [...RAW_IMAGES, ...RAW_IMAGES];
+// Use exactly the defined items
+const CAROUSEL_ITEMS = RAW_IMAGES;
 
 const PastEvents = () => {
     const totalItems = CAROUSEL_ITEMS.length;
@@ -22,7 +28,7 @@ const PastEvents = () => {
 
     return (
         <div className="past-events-section" id="past-events">
-            <h2 className="section-title">Past Events: Relive the Journey</h2>
+            <h2 className="section-title">PAST EVENTS: RELIVE THE JOURNEY</h2>
 
             <div className="scene-container">
                 <div className="split-view left-split">
@@ -62,10 +68,12 @@ const PastEvents = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* The Blur/Fade Effect Overlay */}
+                <div className="edge-overlays"></div>
             </div>
 
             {/* Visual Overlays */}
-            {/* effect-overlay removed */}
             <div className="center-line"></div>
         </div>
     );
