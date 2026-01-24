@@ -1,19 +1,34 @@
+import { useEffect, useRef } from 'react';
+
 const Hero = () => {
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.playbackRate = 0.55;
+        }
+    }, []);
+
     return (
         <header className="hero">
             <div className="hero-bg">
                 <div className="hero-overlay"></div>
-                <img src="/hero.png" alt="Futuristic Background" className="hero-image" />
+                <video
+                    ref={videoRef}
+                    src="/hero.mp4"
+                    className="hero-video"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                />
             </div>
-            <div className="container hero-content">
-                <h1 className="animate-fade-in">Innovate the <br />Future of Tech</h1>
-                <p className="animate-fade-in" style={{ animationDelay: '0.2s', maxWidth: '600px' }}>
-                    Join the revolution at TechKriti 26. Experience the cutting edge of technology, design, and innovation in a premium digital ecosystem.
+            <div className="container hero-content" style={{ textAlign: 'center' }}>
+                <h1 className="hero-title animate-fade-in">TECHKRITI 2026</h1>
+                <p className="hero-subtitle animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                    NEO · NOVUS · SINGULARITA
                 </p>
-                <div className="hero-actions animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                    <button className="btn btn-primary">Get Started</button>
-                    <button className="btn btn-outline" style={{ marginLeft: '1rem' }}>Learn More</button>
-                </div>
             </div>
         </header>
     );

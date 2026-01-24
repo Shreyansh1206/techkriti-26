@@ -3,8 +3,9 @@ const Community = () => {
         <section id="community" className="section">
             <div className="container" style={{ textAlign: 'center' }}>
                 <div className="glass-card" style={{
-                    background: 'linear-gradient(to right, hsl(var(--color-primary) / 0.1), hsl(var(--color-secondary) / 0.1))',
-                    borderColor: 'hsl(var(--color-primary) / 0.5)'
+                    background: 'radial-gradient(circle at center, hsl(220 50% 15%), hsl(220 50% 10%))',
+                    border: 'none',
+                    boxShadow: 'none'
                 }}>
                     <h2 style={{ marginBottom: '1rem' }}>Join Our Community</h2>
                     <p style={{ maxWidth: '600px', margin: '0 auto 2rem auto' }}>
