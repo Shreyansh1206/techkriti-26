@@ -412,3 +412,12 @@ p {
   animation-delay: -8s;
 }
 
+/*for social links*/
+.social-links a,
+.social-links a:hover,
+.social-links a:visited,
+.social-links a:active,
+.social-links a:focus {
+    color: white !important;
+    text-decoration: none;
+}
