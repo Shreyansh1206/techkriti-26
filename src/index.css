@@ -274,3 +274,58 @@ p {
   margin-top: 4rem;
   border-top: 1px solid hsl(255 255 255 / 0.05);
 }
+
+/* Component Specific Styles */
+
+/* About Stats */
+.about-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem;
+  background: linear-gradient(135deg, hsl(var(--color-bg-card)), hsl(var(--color-bg-card-hover)));
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Legacy Timeline Cards */
+.legacy-card {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.legacy-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+/* Community Section CTA */
+#community .glass-card {
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#community .glass-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, hsl(var(--color-primary) / 0.1) 0%, transparent 60%);
+  animation: rotate 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
