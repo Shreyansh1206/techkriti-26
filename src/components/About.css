@@ -2,8 +2,7 @@
 
 .about-section {
   position: relative;
-  min-height: 150vh; /* Make it tall enough to scroll through */
-  background-color: #140f24; /* Match existing theme */
+  min-height: 120vh; /* Reduced height since there's less text */
   color: #ffffff;
   font-family: "Inter", sans-serif;
   display: flex;

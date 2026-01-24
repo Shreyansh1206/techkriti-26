@@ -19,8 +19,8 @@ const About = () => {
             // Finish revealing when the section is mostly scrolled through
             
             // Determine start and end points relative to viewport
-            const start = windowHeight *0.7; // Start almost immediately as it enters
-            const end = windowHeight * 0.5;  // Finish slightly below the middle to ensure it's done quickly
+            const start = windowHeight * 0.6; // Start when top is 80% down the screen
+            const end = windowHeight * 0.2;   // End when the element is near the top (20% from top)
 
             // Currently 'top' decreases as we scroll down.
             // When rect.top == start, progress is 0.
