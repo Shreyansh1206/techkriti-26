@@ -13,7 +13,7 @@ const Legacy = () => {
                 <h2 className="section-title">Our Legacy</h2>
                 <div className="container" style={{ display: "flex", flexDirection: "column", alignItems: "center", marginBottom: "60px", marginTop: "60px" }}>
                     <h2>A Legacy in Frames</h2>
-                    <img src="/legacy/drill1.jpg" style={{
+                    <img src="/gallery/cds_inauguration.jpg" style={{
                         width: "max(360px,40vw)", height: "400px", marginTop: "60px", objectFit: 'cover', borderRadius: '1rem'
                     }} />
                 </div>
@@ -24,11 +24,11 @@ const Legacy = () => {
 
 
                     <div className="card-3d" style={{ marginTop: "120px", marginBottom: "60px" }}>
-                        <div style={{ backgroundImage: 'url(/legacy/JNT04314.jpg)', backgroundSize: 'cover' }}></div>
-                        <div style={{ backgroundImage: 'url(/legacy/JNT05542.jpg)', backgroundSize: 'cover' }}></div>
-                        <div style={{ backgroundImage: 'url(/legacy/JNT06044.jpg)', backgroundSize: 'cover' }}></div>
-                        <div style={{ backgroundImage: 'url(/legacy/PAT00195.jpg)', backgroundSize: 'cover' }}></div>
-                        <div style={{ backgroundImage: 'url(/legacy/drill1.jpg)', backgroundSize: 'cover' }}></div>
+                        <div style={{ backgroundImage: 'url(/gallery/army1.jpg)', backgroundSize: 'cover' }}></div>
+                        <div style={{ backgroundImage: 'url(/gallery/drill.jpg)', backgroundSize: 'cover' }}></div>
+                        <div style={{ backgroundImage: 'url(/gallery/air.jpg)', backgroundSize: 'cover' }}></div>
+                        <div style={{ backgroundImage: 'url(/gallery/robo6.jpg)', backgroundSize: 'cover' }}></div>
+                        <div style={{ backgroundImage: 'url(/gallery/guns1.jpg)', backgroundSize: 'cover' }}></div>
                     </div>
 
                 </div>
