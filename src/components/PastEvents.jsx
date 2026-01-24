@@ -1,34 +1,73 @@
+import React from 'react';
+import './PastEvents.css';
+
+import demoImage from '../assets/demo.jpeg';
+
+// Generate a list of items to populate the cylinder
+const RAW_IMAGES = [
+  demoImage,
+  demoImage,
+  demoImage,
+  demoImage,
+  demoImage,
+  demoImage,
+];
+
+// Double the array to ensure cylinder density
+const CAROUSEL_ITEMS = [...RAW_IMAGES, ...RAW_IMAGES];
+
 const PastEvents = () => {
+    const totalItems = CAROUSEL_ITEMS.length;
+    const anglePerItem = 360 / totalItems;
+
     return (
-        <section id="past-events" className="section">
-            <div className="container">
-                <h2 className="section-title">Past Events</h2>
-                <div className="grid">
-                    {/* Placeholders for event images */}
-                    <div className="glass-card" style={{ padding: '0', overflow: 'hidden' }}>
-                        <div style={{ height: '200px', background: 'linear-gradient(45deg, hsl(var(--color-primary)), hsl(var(--color-secondary)))' }}></div>
-                        <div style={{ padding: '1.5rem' }}>
-                            <h3>Hackathon 2024</h3>
-                            <p>48 hours of non-stop coding innovation.</p>
+        <div className="past-events-section" id="past-events">
+            <h2 className="section-title">Past Events: Relive the Journey</h2>
+
+            <div className="scene-container">
+                <div className="split-view left-split">
+                    <div className="carousel-scene">
+                        <div className="cylinder grayscale-filter">
+                            {CAROUSEL_ITEMS.map((imgSrc, index) => {
+                                const rotationAngle = index * anglePerItem;
+                                return (
+                                    <div 
+                                        className="carousel-item" 
+                                        key={index}
+                                        style={{ '--angle': `${rotationAngle}deg` }}
+                                    >
+                                        <img src={imgSrc} alt={`Event ${index}`} className="event-img" />
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
-                    <div className="glass-card" style={{ padding: '0', overflow: 'hidden' }}>
-                        <div style={{ height: '200px', background: 'linear-gradient(135deg, hsl(var(--color-accent)), hsl(var(--color-primary-dark)))' }}></div>
-                        <div style={{ padding: '1.5rem' }}>
-                            <h3>RoboWars</h3>
-                            <p>Clash of the metal titans.</p>
-                        </div>
-                    </div>
-                    <div className="glass-card" style={{ padding: '0', overflow: 'hidden' }}>
-                        <div style={{ height: '200px', background: 'linear-gradient(to right, hsl(var(--color-bg-card)), hsl(var(--color-primary)))' }}></div>
-                        <div style={{ padding: '1.5rem' }}>
-                            <h3>AI Summit</h3>
-                            <p>Exploring the frontiers of Artificial Intelligence.</p>
+                </div>
+
+                <div className="split-view right-split">
+                    <div className="carousel-scene">
+                        <div className="cylinder">
+                            {CAROUSEL_ITEMS.map((imgSrc, index) => {
+                                const rotationAngle = index * anglePerItem;
+                                return (
+                                    <div 
+                                        className="carousel-item" 
+                                        key={index}
+                                        style={{ '--angle': `${rotationAngle}deg` }}
+                                    >
+                                        <img src={imgSrc} alt={`Event ${index}`} className="event-img" />
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+
+            {/* Visual Overlays */}
+            {/* effect-overlay removed */}
+            <div className="center-line"></div>
+        </div>
     );
 };
 
