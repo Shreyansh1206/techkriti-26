@@ -19,7 +19,7 @@ const Footer = () => {
                                 <a href="https://www.youtube.com/c/techkritiiitkanpur.**" className="icon-link">
                                     <i className="fa-brands fa-youtube fa-xl"></i>
                                 </a>
-                                
+
                                 <a href="https://in.linkedin.com/school/techkriti-iitk/.**" className="icon-link">
                                     <i className="fa-brands fa-linkedin-in fa-xl"></i>
                                 </a>
@@ -30,11 +30,11 @@ const Footer = () => {
 
 
                             </div></div>
-                        <div className="bg-green-200 p-4" style={{display:"flex",justifyContent:"center"}}><img src="../public/tech.png" height="300" width="300"></img></div>
-                        
+                        <div className="bg-green-200 p-4" style={{ display: "flex", justifyContent: "center" }}><img src="/public/tech.png" height="300" width="300"></img></div>
+
                     </div>
 
-                    <hr style={{marginTop:"24px",marginBottom:"16px"}}></hr>
+                    <hr style={{ marginTop: "24px", marginBottom: "16px" }}></hr>
                     <p className="copyright">&copy; 2026 TechKriti. All rights reserved.</p>
                 </div>
 
