@@ -58,6 +58,7 @@ const Navbar = () => {
                     >
                       Register
                     </button>
+                    <a href="#community" className="btn btn-primary sm">Register</a>
                 </div>
             </div>
         </nav>

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Entrepreneurial from './pages/Entrepreneurial'; // NEW
+import Events from './pages/EventsTechnical';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             path="/events/entrepreneurial"
             element={<Entrepreneurial />}
           />
+          <Route path="/events" element={<Events />} />
         </Routes>
         <Footer />
       </div>
