@@ -1,0 +1,64 @@
+/* PAGE */
+.entre-page {
+  padding: 4rem 2rem;
+}
+
+.entre-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* CARDS */
+.entre-cards {
+  display: flex;
+  gap: 2rem;
+}
+
+.entre-card {
+  flex: 1;
+  padding: 2rem;
+  background: #0f172a;
+  color: white;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.25s;
+}
+
+.entre-card:hover {
+  transform: scale(1.05);
+}
+
+/* MODAL */
+.entre-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.entre-modal {
+  background: white;
+  padding: 2rem;
+  width: 420px;
+  border-radius: 14px;
+}
+
+.entre-competition {
+  margin-bottom: 1.2rem;
+}
+
+.entre-register-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.entre-close-btn {
+  margin-top: 1rem;
+}
