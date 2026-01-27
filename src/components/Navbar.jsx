@@ -19,7 +19,7 @@ const Navbar = () => {
                     <a href="#legacy">Legacy</a>
                     <a href="#events">Events</a>
                     <a href="#gallery">Gallery</a>
-                    <a href="#community" className="btn btn-primary sm">Join Community</a>
+                    <a href="#community" className="btn btn-primary sm">Register</a>
                 </div>
             </div>
         </nav>
