@@ -1,6 +1,6 @@
 /* EntrepreneurialModal.css */
 
-.entre-modal-overlay {
+.em-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
@@ -13,7 +13,7 @@
   animation: fadeIn 0.3s ease-out;
 }
 
-.entre-modal {
+.em-modal {
   background: hsl(var(--color-bg-card) / 0.85);
   padding: 3rem;
   width: 90%;
@@ -25,14 +25,14 @@
   animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.entre-modal-header {
+.em-header {
   margin-bottom: 2.5rem;
   text-align: center;
   border-bottom: 1px solid hsl(var(--color-primary) / 0.2);
   padding-bottom: 1.5rem;
 }
 
-.entre-modal-header h2 {
+.em-header h2 {
   font-family: "Orbitron", var(--font-sans);
   font-size: 2rem;
   color: hsl(var(--color-primary));
@@ -40,13 +40,13 @@
   margin-bottom: 0;
 }
 
-.entre-competitions {
+.em-competitions {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.entre-competition {
+.em-track-item {
   background: hsl(var(--color-bg-dark) / 0.5);
   padding: 1.5rem;
   border-radius: var(--radius-md);
@@ -58,26 +58,26 @@
   gap: 1rem;
 }
 
-.entre-competition:hover {
-  /* Hover effect removed as per user request */
-  background: hsl(var(--color-bg-dark) / 0.5); /* Keep original background */
+.em-track-item:hover {
+  /* No special hover effect requested for row */
   border-color: hsl(var(--color-text-muted) / 0.1);
+  background: hsl(var(--color-bg-dark) / 0.5);
   transform: none;
 }
 
-.entre-comp-info h4 {
+.em-track-info h4 {
   color: hsl(var(--color-text-main));
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 
-.entre-comp-info p {
+.em-track-info p {
   color: hsl(var(--color-text-muted));
   font-size: 0.95rem;
   margin-bottom: 0;
 }
 
-.entre-register-btn {
+.em-register-btn {
   background: hsl(var(--color-primary));
   color: white;
   border: none;
@@ -90,13 +90,13 @@
   box-shadow: 0 4px 12px hsl(var(--color-primary) / 0.3);
 }
 
-.entre-register-btn:hover {
+.em-register-btn:hover {
   background: hsl(var(--color-primary-dark));
   box-shadow: 0 6px 16px hsl(var(--color-primary) / 0.5);
   transform: translateY(-2px);
 }
 
-.entre-close-btn {
+.em-close-btn {
   margin-top: 2rem;
   width: 100%;
   padding: 1rem;
@@ -111,7 +111,7 @@
   letter-spacing: 0.1em;
 }
 
-.entre-close-btn:hover {
+.em-close-btn:hover {
   background: hsl(var(--color-secondary) / 0.1);
   border-color: hsl(var(--color-secondary));
   box-shadow: 0 0 20px hsl(var(--color-secondary) / 0.2);
@@ -138,12 +138,12 @@
 }
 
 @media (max-width: 600px) {
-  .entre-competition {
+  .em-track-item {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .entre-register-btn {
+  .em-register-btn {
     width: 100%;
     margin-top: 0.5rem;
   }
