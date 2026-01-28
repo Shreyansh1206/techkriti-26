@@ -11,27 +11,27 @@ const EntrepreneurialModal = ({ track, competitions, onClose }) => {
   }, []);
 
   return (
-    <div className="entre-modal-overlay" onClick={onClose}>
-      <div className="entre-modal glass-card" onClick={(e) => e.stopPropagation()}>
-        <div className="entre-modal-header">
+    <div className="em-overlay" onClick={onClose}>
+      <div className="em-modal glass-card" onClick={(e) => e.stopPropagation()}>
+        <div className="em-header">
           <h2>{track}</h2>
         </div>
 
-        <div className="entre-competitions">
+        <div className="em-competitions">
           {competitions.map((comp, index) => (
-            <div key={index} className="entre-competition">
-              <div className="entre-comp-info">
+            <div key={index} className="em-track-item">
+              <div className="em-track-info">
                 <h4>{comp.name}</h4>
                 <p>{comp.desc}</p>
               </div>
-              <button className="entre-register-btn">
+              <button className="em-register-btn">
                 Register
               </button>
             </div>
           ))}
         </div>
 
-        <button className="entre-close-btn" onClick={onClose}>
+        <button className="em-close-btn" onClick={onClose}>
           Close
         </button>
       </div>
