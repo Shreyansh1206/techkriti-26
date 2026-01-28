@@ -1,8 +1,9 @@
 import { useState } from 'react';
-
 import EntrepreneurialCard from '../components/entrepreneurial/EntrepreneurialCard';
 import EntrepreneurialModal from '../components/entrepreneurial/EntrepreneurialModal';
 import '../components/entrepreneurial/entrepreneurial.css';
+import EntrepreneurialNavbar from '../components/entrepreneurial/EntrepreneurialNavbar';
+
 
 const Entrepreneurial = () => {
   const [activeTrack, setActiveTrack] = useState(null);
@@ -26,21 +27,33 @@ const Entrepreneurial = () => {
 
   return (
     <div className="entre-page">
-      <h1 className="entre-title">Entrepreneurial Events</h1>
 
-      <div className="entre-cards">
+      <EntrepreneurialNavbar />
+
+      {/* HERO SECTION */}
+      <section className="entre-hero">
+        <h1 className="entre-main-title">
+          TECHKRITI <span>2026</span>
+        </h1>
+        <p className="entre-tagline">
+          neo. novus. singularity
+        </p>
+      </section>
+
+      {/* CARDS SECTION */}
+      <section className="entre-events">
         <EntrepreneurialCard
-          title="Startup Track"
-          description="For startup pitches and product ideas"
+          title="Upstart Pioneer"
+          description="For early-stage founders and disruptive ideas"
           onClick={() => setActiveTrack("startup")}
         />
 
         <EntrepreneurialCard
-          title="Business Track"
-          description="Strategy and consulting challenges"
+          title="Pitch Premier"
+          description="High-stakes pitching and business strategy"
           onClick={() => setActiveTrack("business")}
         />
-      </div>
+      </section>
 
       {activeTrack && (
         <EntrepreneurialModal
@@ -49,8 +62,10 @@ const Entrepreneurial = () => {
           onClose={() => setActiveTrack(null)}
         />
       )}
+
     </div>
   );
+
 };
 
 export default Entrepreneurial;

@@ -1,68 +1,77 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Navbar = () => {
-    const [scrolled, setScrolled] = useState(false);
-    const [showEvents, setShowEvents] = useState(false);
-    const navigate = useNavigate();
+const Navbar = ({ isLoggedIn }) => {
+  const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        const handleScroll = () => setScrolled(window.scrollY > 50);
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-    return (
-        <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-            <div className="container nav-content">
-                <div
-                  className="logo"
-                  onClick={() => navigate('/')}
-                  style={{ cursor: 'pointer' }}
-                >
-                  TechKriti<span className="highlight">26</span>
-                </div>
+  return (
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="container nav-content">
+        {/* LOGO */}
+        <div
+          className="logo"
+          onClick={() => navigate('/')}
+          style={{ cursor: 'pointer' }}
+        >
+          TechKriti<span className="highlight">26</span>
+        </div>
 
-                <div className="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#theme">Theme</a>
-                    <a href="#legacy">Legacy</a>
+        {/* NAV LINKS */}
+        <div className="nav-links">
+          <div onClick={() => document.getElementById('about')?.scrollIntoView()}>
+            About
+          </div>
+          <div onClick={() => document.getElementById('theme')?.scrollIntoView()}>
+            Theme
+          </div>
+          <div onClick={() => document.getElementById('legacy')?.scrollIntoView()}>
+            Legacy
+          </div>
 
-                    {/* EVENTS DROPDOWN */}
-                    <div
-                      className="events-dropdown"
-                      onMouseEnter={() => setShowEvents(true)}
-                      onMouseLeave={() => setShowEvents(false)}
-                    >
-                      <span className="nav-link">Events</span>
+          {/* EVENTS DROPDOWN */}
+          <div className="events-dropdown">
+            <div className="nav-link">Events</div>
 
-                      {showEvents && (
-                        <div className="dropdown-menu">
-                          <div onClick={() => navigate('/events/technical')}>
-                            Technical
-                          </div>
-                          <div onClick={() => navigate('/events/entrepreneurial')}>
-                            Entrepreneurial
-                          </div>
-                          <div onClick={() => navigate('/events/miscellaneous')}>
-                            Miscellaneous
-                          </div>
-                        </div>
-                      )}
-                    </div>
-
-                    <a href="#gallery">Gallery</a>
-                    <button
-                      className="btn btn-primary sm"
-                      onClick={() => navigate('/events')}
-                    >
-                      Register
-                    </button>
-                    <a href="#community" className="btn btn-primary sm">Register</a>
-                </div>
+            <div className="dropdown-menu">
+              <div onClick={() => navigate('/events/technical')}>
+                Technical
+              </div>
+              <div onClick={() => navigate('/events/entrepreneurial')}>
+                Entrepreneurial
+              </div>
+              <div onClick={() => navigate('/events/miscellaneous')}>
+                Miscellaneous
+              </div>
             </div>
-        </nav>
-    );
+          </div>
+
+          {/* AUTH BUTTON */}
+          {isLoggedIn ? (
+            <button
+              className="btn btn-primary sm"
+              onClick={() => navigate('/register')}
+            >
+              Register
+            </button>
+          ) : (
+            <button
+              className="btn btn-primary sm"
+              onClick={() => navigate('/signin')}
+            >
+              Sign In
+            </button>
+          )}
+        </div>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
