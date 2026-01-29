@@ -33,10 +33,10 @@ const Entrepreneurial = () => {
       {/* HERO SECTION */}
       <section className="entre-hero">
         <h1 className="entre-main-title">
-          TECHKRITI <span>2026</span>
+          ENTREPRENEURIAL
         </h1>
         <p className="entre-tagline">
-          neo. novus. singularity
+          *description of the category*
         </p>
       </section>
 
