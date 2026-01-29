@@ -9,18 +9,19 @@ const Entrepreneurial = () => {
   const [activeTrack, setActiveTrack] = useState(null);
 
   const data = {
-    startup: {
-      title: "Startup Track",
+    entrepreneurial: {
+      title: "Entrepreneurial Track",
       competitions: [
-        { name: "Pitch Perfect", desc: "Pitch your startup idea" },
-        { name: "Prototype Sprint", desc: "Build and present a prototype" }
+        { name: "Upstart Pioneer", desc: "Pitch your startup idea" },
+        { name: "Pitch Premier", desc: "Build and present a prototype" }
       ]
     },
-    business: {
-      title: "Business Track",
+    fintech: {
+      title: "Fintech Track",
       competitions: [
-        { name: "Case Conquest", desc: "Solve real business cases" },
-        { name: "Market Mayhem", desc: "Crack market strategy problems" }
+        { name: "Beat the Market", desc: "Solve real business cases" },
+        { name: "Trade Quest", desc: "Crack market strategy problems" },
+        { name: "Strategy Sprint", desc: "Description of strategy sprint"}
       ]
     }
   };
@@ -43,15 +44,15 @@ const Entrepreneurial = () => {
       {/* CARDS SECTION */}
       <section className="entre-events">
         <EntrepreneurialCard
-          title="Upstart Pioneer"
+          title="Entrepreneurial"
           description="For early-stage founders and disruptive ideas"
-          onClick={() => setActiveTrack("startup")}
+          onClick={() => setActiveTrack("entrepreneurial")}
         />
 
         <EntrepreneurialCard
-          title="Pitch Premier"
+          title="Fintech"
           description="High-stakes pitching and business strategy"
-          onClick={() => setActiveTrack("business")}
+          onClick={() => setActiveTrack("fintech")}
         />
       </section>
 
