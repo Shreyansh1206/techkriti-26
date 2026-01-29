@@ -12,50 +12,57 @@ const Technical = () => {
     business: {
       title: "Business Events",
       competitions: [
-        "BizSim",
-        "Case Forge"
+        "Product Challenge",
+        "Pitch Premiere",
+        "Blockchain Nexus"
       ]
     },
     mun: {
       title: "Model United Nations",
       competitions: [
-        "UNGA",
+        "UNHRC",
+        "Lok Sabha",
         "UNSC"
       ]
     },
     robogames: {
       title: "Robogames",
       competitions: [
-        "RoboRace",
-        "RoboWar"
+        "iarc",
+        "robowars",
+        "manoeveur",
+        "techriti grand prix"
       ]
     },
     takeoff: {
       title: "Takeoff",
       competitions: [
-        "Drone Dash",
-        "Aerial Ops"
+        "idrl",
+        "multirotor",
+        "skysparks",
+        "hovermania"
       ]
     },
     software: {
       title: "Software Corner",
       competitions: [
-        "Code Relay",
-        "Bug Bash"
+        "speed quant",
+        "code & compete",
+        "ctf"
       ]
     },
     mandakini: {
       title: "Mandakini",
       competitions: [
         "Astro Quiz",
-        "Cosmic Hunt"
+        "observe analyse & sovle"
       ]
     },
     technovation: {
       title: "Technovation",
       competitions: [
-        "InnovateX",
-        "Tech Pitch"
+        "TIC (Techkriti Innovation Challenge)",
+        "III (Industry Institute Interaction)"
       ]
     }
   };
