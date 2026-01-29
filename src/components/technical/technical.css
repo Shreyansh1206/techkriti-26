@@ -1,137 +1,13 @@
 /* PAGE BASE */
-.entre-page {
-  /* background removed to use global theme */
+.tech-page {
+  /* background removed to use global theme (same as entrepreneurial) */
   color: white;
   min-height: 100vh;
   font-family: "Inter", sans-serif;
 }
 
-/* HERO */
-.entre-hero {
-  padding-top: 140px;
-  padding-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.entre-main-title {
-  font-size: 4rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-}
-
-.entre-main-title span {
-  color: #38bdf8;
-}
-
-.entre-tagline {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  letter-spacing: 0.3em;
-  text-transform: lowercase;
-  opacity: 0.85;
-}
-
-.entre-events {
-  padding: 1rem 2rem 6rem;
-
-  display: flex;
-  flex-direction: row; /* SIDE BY SIDE */
-  flex-wrap: wrap; /* Allow wrapping for grid */
-  justify-content: center; /* center horizontally */
-  align-items: center; /* center vertically */
-
-  gap: 4rem;
-}
-
-.entre-card {
-  width: 100%;
-  max-width: 420px;
-  height: 420px; /* 👈 THIS makes them tall */
-
-  padding: 3.5rem 2.5rem;
-
-  background: rgba(2, 6, 23, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 22px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertical centering inside card */
-
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.entre-card h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.entre-card p {
-  font-size: 1rem;
-  opacity: 0.8;
-  line-height: 1.6;
-}
-
-.entre-card:hover {
-  transform: translateY(-10px);
-  border-color: #38bdf8;
-  box-shadow: 0 20px 60px rgba(56, 189, 248, 0.18);
-}
-
-/* MODAL */
-.entre-modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.entre-modal {
-  background: #020617;
-  padding: 2.5rem;
-  width: 440px;
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.entre-modal h2 {
-  margin-bottom: 1.5rem;
-}
-
-.entre-competition {
-  margin-bottom: 1.5rem;
-}
-
-.entre-register-btn {
-  margin-top: 0.4rem;
-  background: #38bdf8;
-  color: #020617;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.entre-close-btn {
-  margin-top: 1.5rem;
-  background: transparent;
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-/* ENTREPRENEURIAL NAVBAR */
-.entre-navbar {
+/* NAVBAR */
+.tech-navbar {
   position: fixed;
   top: 0;
   width: 100%;
@@ -145,34 +21,148 @@
   z-index: 1000;
 }
 
-.entre-nav-logo {
+.tech-nav-logo {
   font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;
 }
 
-.entre-nav-logo span {
+.tech-nav-logo span {
   color: #38bdf8;
 }
 
-.entre-nav-links {
+.tech-nav-links {
   display: flex;
   gap: 2.5rem;
 }
 
-.entre-nav-links span {
+.tech-nav-links span {
   cursor: pointer;
   opacity: 0.7;
   letter-spacing: 0.12em;
   transition: opacity 0.2s;
 }
 
-.entre-nav-links span:hover {
+.tech-nav-links span:hover {
   opacity: 1;
 }
 
-.entre-nav-links .active {
+.tech-nav-links .active {
   opacity: 1;
   color: #38bdf8;
 }
 
+/* HERO */
+.tech-hero {
+  padding-top: 140px;   /* space for navbar */
+  padding-bottom: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tech-title {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.tech-tagline {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.3em;
+  text-transform: lowercase;
+  opacity: 0.85;
+}
+
+/* EVENTS / CARDS SECTION */
+.tech-events {
+  padding: 1rem 2rem 6rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 4rem;
+}
+
+/* CARD */
+.tech-card {
+  width: 100%;
+  max-width: 420px;
+  height: 420px;
+
+  padding: 3.5rem 2.5rem;
+
+  background: rgba(2, 6, 23, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 22px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tech-card h3 {
+  font-size: 2rem;
+}
+
+.tech-card:hover {
+  transform: translateY(-10px);
+  border-color: #38bdf8;
+  box-shadow: 0 20px 60px rgba(56, 189, 248, 0.18);
+}
+
+/* MODAL */
+.tech-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.tech-modal {
+  background: #020617;
+  padding: 2.5rem;
+  width: 440px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-modal h2 {
+  margin-bottom: 1.5rem;
+}
+
+.tech-competition {
+  margin-bottom: 1.5rem;
+}
+
+.tech-register-btn {
+  margin-top: 0.4rem;
+  background: #38bdf8;
+  color: #020617;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tech-close-btn {
+  margin-top: 1.5rem;
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
