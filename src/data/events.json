@@ -1,0 +1,136 @@
+{
+  "entrepreneurial": {
+    "title": "Entrepreneurial Track",
+    "category": "Entrepreneurial",
+    "data": [
+      {
+        "flag": { "content": "heading" },
+        "title": { "content": "Entrepreneurial Track" },
+        "desc": { "content": "" }
+      },
+      {
+        "flag": { "content": "overview" },
+        "title": { "content": "" },
+        "desc": {
+          "content": "Welcome to the Entrepreneurial Track, a launchpad for visionaries and changemakers! Here, innovation meets execution as you dive into the world of startups, business strategy, and problem-solving. Whether you're pitching a groundbreaking idea or analyzing market trends, this track challenges you to think like a founder and lead with impact."
+        }
+      },
+      {
+        "flag": { "content": "comp" },
+        "title": { "content": "Upstart Pioneer" },
+        "desc": {
+          "content": "Got a startup idea that could change the world? **Upstart Pioneer** is your stage to shine! Pitch your business concept to a panel of seasoned investors and industry experts. Refine your business model, validate your market fit, and convince the judges that your venture is the next big thing."
+        }
+      },
+      {
+        "flag": { "content": "comp" },
+        "title": { "content": "Pitch Premier" },
+        "desc": {
+          "content": "Ideas are great, but execution is key. In **Pitch Premier**, you don't just talk—you show. Build a functional prototype or MVP of your innovative product and present it alongside your business plan. Prove that your solution is not just viable but scalable and ready for the real world."
+        }
+      },
+      {
+        "flag": { "content": "contacts" },
+        "title": { "content": "" },
+        "desc": {
+          "content": "**Track Coordinator**\n\nJohn Doe\n\nEmail: [john.doe@techkriti.org](mailto:john.doe@techkriti.org)\n\nPhone: +91 98765 43210"
+        }
+      },
+      {
+        "flag": { "content": "guidelines" },
+        "title": { "content": "" },
+        "desc": {
+          "content": "- Teams must follow the Time Limits and strictly stick to the allowed styles. Teams shall be penalized for not doing so.\n- Any kind of fluid, flame, powders, glitters, heavy or sharp objects or any material which has the possibility of tampering/damaging the stage is **STRICTLY** not allowed.\n- All the slotting will be done by lottery system.\n- The decision of the judges shall be final and binding."
+        }
+      }
+    ]
+  },
+  "fintech": {
+    "title": "Fintech Track",
+    "category": "Entrepreneurial",
+    "data": [
+      {
+        "flag": { "content": "heading" },
+        "title": { "content": "Fintech Track" },
+        "desc": { "content": "" }
+      },
+      {
+        "flag": { "content": "overview" },
+        "title": { "content": "" },
+        "desc": {
+          "content": "Dive into the fast-paced world of financial technology! The Fintech Track offers a unique blend of finance and tech, challenging you to solve real-world economic problems. From algorithmic trading to blockchain applications, explore the future of money and markets."
+        }
+      },
+      {
+        "flag": { "content": "comp" },
+        "title": { "content": "Beat the Market" },
+        "desc": {
+          "content": "Think you can outsmart the market? **Beat the Market** tests your trading acumen and financial analysis skills. Analyze market trends, manage a virtual portfolio, and maximize your returns in this high-stakes simulation game."
+        }
+      },
+      {
+        "flag": { "content": "contacts" },
+        "title": { "content": "" },
+        "desc": {
+          "content": "**Track Coordinator**\n\nJane Smith\n\nEmail: [jane.smith@techkriti.org](mailto:jane.smith@techkriti.org)\n\nPhone: +91 12345 67890"
+        }
+      }
+    ]
+  },
+  "business": {
+    "title": "Business Events",
+    "category": "Technical",
+    "data": [
+      {
+        "flag": { "content": "heading" },
+        "title": { "content": "Business Events" },
+        "desc": { "content": "" }
+      },
+      {
+        "flag": { "content": "overview" },
+        "title": { "content": "" },
+        "desc": { "content": "Business Events overview..." }
+      },
+      {
+        "flag": { "content": "comp" },
+        "title": { "content": "Product Challenge" },
+        "desc": { "content": "Product Challenge description..." }
+      },
+      {
+        "flag": { "content": "contacts" },
+        "title": { "content": "" },
+        "desc": { "content": "Contact info..." }
+      }
+    ]
+  },
+  "mun": {
+    "title": "Model United Nations",
+    "category": "Technical",
+    "data": []
+  },
+  "robogames": {
+    "title": "Robogames",
+    "category": "Technical",
+    "data": []
+  },
+  "takeoff": {
+    "title": "Takeoff",
+    "category": "Technical",
+    "data": []
+  },
+  "software": {
+    "title": "Software Corner",
+    "category": "Technical",
+    "data": []
+  },
+  "mandakini": {
+    "title": "Mandakini",
+    "category": "Technical",
+    "data": []
+  },
+  "technovation": {
+    "title": "Technovation",
+    "category": "Technical",
+    "data": []
+  }
+}

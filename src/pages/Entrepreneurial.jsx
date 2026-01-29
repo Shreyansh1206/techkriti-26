@@ -1,35 +1,17 @@
-import { useState } from 'react';
-import EntrepreneurialCard from '../components/entrepreneurial/EntrepreneurialCard';
-import EntrepreneurialModal from '../components/entrepreneurial/EntrepreneurialModal';
+import { useNavigate } from 'react-router-dom';
+import EventCard from '../components/UI/EventCard';
 import '../components/entrepreneurial/entrepreneurial.css';
-import EntrepreneurialNavbar from '../components/entrepreneurial/EntrepreneurialNavBar';
+
+
 
 
 const Entrepreneurial = () => {
-  const [activeTrack, setActiveTrack] = useState(null);
-
-  const data = {
-    entrepreneurial: {
-      title: "Entrepreneurial Track",
-      competitions: [
-        { name: "Upstart Pioneer", desc: "Pitch your startup idea" },
-        { name: "Pitch Premier", desc: "Build and present a prototype" }
-      ]
-    },
-    fintech: {
-      title: "Fintech Track",
-      competitions: [
-        { name: "Beat the Market", desc: "Solve real business cases" },
-        { name: "Trade Quest", desc: "Crack market strategy problems" },
-        { name: "Strategy Sprint", desc: "Description of strategy sprint"}
-      ]
-    }
-  };
+  const navigate = useNavigate();
 
   return (
     <div className="entre-page">
 
-      <EntrepreneurialNavbar />
+
 
       {/* HERO SECTION */}
       <section className="entre-hero">
@@ -43,26 +25,21 @@ const Entrepreneurial = () => {
 
       {/* CARDS SECTION */}
       <section className="entre-events">
-        <EntrepreneurialCard
+        <EventCard
           title="Entrepreneurial"
           description="For early-stage founders and disruptive ideas"
-          onClick={() => setActiveTrack("entrepreneurial")}
+          to="/events/event-details/entrepreneurial"
+          image="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=2532"
         />
 
-        <EntrepreneurialCard
+        <EventCard
           title="Fintech"
           description="High-stakes pitching and business strategy"
-          onClick={() => setActiveTrack("fintech")}
+          to="/events/event-details/fintech"
+          image="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=2532"
         />
       </section>
 
-      {activeTrack && (
-        <EntrepreneurialModal
-          track={data[activeTrack].title}
-          competitions={data[activeTrack].competitions}
-          onClose={() => setActiveTrack(null)}
-        />
-      )}
 
     </div>
   );

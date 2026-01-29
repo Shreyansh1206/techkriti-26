@@ -1,76 +1,18 @@
-import { useState } from 'react';
 
-import TechnicalCard from '../components/technical/TechnicalCard';
-import TechnicalModal from '../components/technical/TechnicalModal';
-import TechnicalNavbar from '../components/technical/TechnicalNavbar';
+
+import EventCard from '../components/UI/EventCard';
+
 import '../components/technical/technical.css';
 
 const Technical = () => {
-  const [activeCategory, setActiveCategory] = useState(null);
 
-  const data = {
-    business: {
-      title: "Business Events",
-      competitions: [
-        "Product Challenge",
-        "Pitch Premiere",
-        "Blockchain Nexus"
-      ]
-    },
-    mun: {
-      title: "Model United Nations",
-      competitions: [
-        "UNHRC",
-        "Lok Sabha",
-        "UNSC"
-      ]
-    },
-    robogames: {
-      title: "Robogames",
-      competitions: [
-        "iarc",
-        "robowars",
-        "manoeveur",
-        "techriti grand prix"
-      ]
-    },
-    takeoff: {
-      title: "Takeoff",
-      competitions: [
-        "idrl",
-        "multirotor",
-        "skysparks",
-        "hovermania"
-      ]
-    },
-    software: {
-      title: "Software Corner",
-      competitions: [
-        "speed quant",
-        "code & compete",
-        "ctf"
-      ]
-    },
-    mandakini: {
-      title: "Mandakini",
-      competitions: [
-        "Astro Quiz",
-        "observe analyse & sovle"
-      ]
-    },
-    technovation: {
-      title: "Technovation",
-      competitions: [
-        "TIC (Techkriti Innovation Challenge)",
-        "III (Industry Institute Interaction)"
-      ]
-    }
-  };
+
+
 
   return (
     <div className="tech-page">
 
-      <TechnicalNavbar />
+
 
       {/* HERO SECTION */}
       <section className="tech-hero">
@@ -84,49 +26,55 @@ const Technical = () => {
 
       {/* CARDS SECTION */}
       <section className="tech-events">
-        <TechnicalCard
+        <EventCard
           title="Business Events"
-          onClick={() => setActiveCategory("business")}
+          description="Strategic competitions testing your business acumen"
+          to="/events/event-details/business"
+          image="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=2371"
         />
 
-        <TechnicalCard
+        <EventCard
           title="Model United Nations"
-          onClick={() => setActiveCategory("mun")}
+          description="Debate, collaborate, and solve global issues"
+          to="/events/event-details/mun"
+          image="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?auto=format&fit=crop&q=80&w=2532"
         />
 
-        <TechnicalCard
+        <EventCard
           title="Robogames"
-          onClick={() => setActiveCategory("robogames")}
+          description="Battle of the bots and autonomous systems"
+          to="/events/event-details/robogames"
+          image="https://images.unsplash.com/photo-1561144257-e32e8efc6c4f?auto=format&fit=crop&q=80&w=2534"
         />
 
-        <TechnicalCard
+        <EventCard
           title="Takeoff"
-          onClick={() => setActiveCategory("takeoff")}
+          description="Aerial robotics and drone challenges"
+          to="/events/event-details/takeoff"
+          image="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&q=80&w=2370"
         />
 
-        <TechnicalCard
+        <EventCard
           title="Software Corner"
-          onClick={() => setActiveCategory("software")}
+          description="Coding challenges and software development"
+          to="/events/event-details/software"
+          image="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=2370"
         />
 
-        <TechnicalCard
+        <EventCard
           title="Mandakini"
-          onClick={() => setActiveCategory("mandakini")}
+          description="Unravel the mysteries of the cosmos"
+          to="/events/event-details/mandakini"
+          image="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2372"
         />
 
-        <TechnicalCard
+        <EventCard
           title="Technovation"
-          onClick={() => setActiveCategory("technovation")}
+          description="Showcase your innovative projects"
+          to="/events/event-details/technovation"
+          image="https://images.unsplash.com/photo-1531297461136-2f568ed61688?auto=format&fit=crop&q=80&w=2370"
         />
       </section>
-
-      {activeCategory && (
-        <TechnicalModal
-          category={data[activeCategory].title}
-          competitions={data[activeCategory].competitions}
-          onClose={() => setActiveCategory(null)}
-        />
-      )}
 
     </div>
   );

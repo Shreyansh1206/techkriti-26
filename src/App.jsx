@@ -9,17 +9,15 @@ import Entrepreneurial from './pages/Entrepreneurial';
 import Events from './pages/Technical';
 import Register from './pages/Register';
 import SignIn from './pages/SignIn';
+import EventDetails from './pages/EventDetails';
 
 /* ---------- Layout ---------- */
 const Layout = ({ isLoggedIn, setIsLoggedIn }) => {
   const location = useLocation();
 
-  // Show global navbar ONLY on home page
-  const showNavbar = location.pathname === '/';
-
   return (
     <>
-      {showNavbar && <Navbar isLoggedIn={isLoggedIn} />}
+      <Navbar isLoggedIn={isLoggedIn} />
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -36,6 +34,7 @@ const Layout = ({ isLoggedIn, setIsLoggedIn }) => {
           path="/events/entrepreneurial"
           element={<Entrepreneurial />}
         />
+        <Route path="/events/event-details/:id" element={<EventDetails />} />
         {/* Miscellaneous page later */}
         {/* <Route path="/events/miscellaneous" element={<Miscellaneous />} /> */}
       </Routes>

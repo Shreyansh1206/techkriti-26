@@ -54,7 +54,7 @@
 
 /* HERO */
 .tech-hero {
-  padding-top: 140px;   /* space for navbar */
+  padding-top: 140px; /* space for navbar */
   padding-bottom: 2rem;
 
   display: flex;
@@ -91,78 +91,5 @@
 }
 
 /* CARD */
-.tech-card {
-  width: 100%;
-  max-width: 420px;
-  height: 420px;
-
-  padding: 3.5rem 2.5rem;
-
-  background: rgba(2, 6, 23, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 22px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.tech-card h3 {
-  font-size: 2rem;
-}
-
-.tech-card:hover {
-  transform: translateY(-10px);
-  border-color: #38bdf8;
-  box-shadow: 0 20px 60px rgba(56, 189, 248, 0.18);
-}
-
-/* MODAL */
-.tech-modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 3000;
-}
-
-.tech-modal {
-  background: #020617;
-  padding: 2.5rem;
-  width: 440px;
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.tech-modal h2 {
-  margin-bottom: 1.5rem;
-}
-
-.tech-competition {
-  margin-bottom: 1.5rem;
-}
-
-.tech-register-btn {
-  margin-top: 0.4rem;
-  background: #38bdf8;
-  color: #020617;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.tech-close-btn {
-  margin-top: 1.5rem;
-  background: transparent;
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
+/* Card styles moved to EventCard.css */
+/* Modal styles removed */

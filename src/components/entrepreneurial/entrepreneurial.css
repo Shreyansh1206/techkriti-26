@@ -47,88 +47,8 @@
   gap: 4rem;
 }
 
-.entre-card {
-  width: 100%;
-  max-width: 420px;
-  height: 420px; /* 👈 THIS makes them tall */
-
-  padding: 3.5rem 2.5rem;
-
-  background: rgba(2, 6, 23, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 22px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertical centering inside card */
-
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.entre-card h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.entre-card p {
-  font-size: 1rem;
-  opacity: 0.8;
-  line-height: 1.6;
-}
-
-.entre-card:hover {
-  transform: translateY(-10px);
-  border-color: #38bdf8;
-  box-shadow: 0 20px 60px rgba(56, 189, 248, 0.18);
-}
-
-/* MODAL */
-.entre-modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.entre-modal {
-  background: #020617;
-  padding: 2.5rem;
-  width: 440px;
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.entre-modal h2 {
-  margin-bottom: 1.5rem;
-}
-
-.entre-competition {
-  margin-bottom: 1.5rem;
-}
-
-.entre-register-btn {
-  margin-top: 0.4rem;
-  background: #38bdf8;
-  color: #020617;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.entre-close-btn {
-  margin-top: 1.5rem;
-  background: transparent;
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
+/* Card styles moved to EventCard.css */
+/* Modal styles removed */
 
 /* ENTREPRENEURIAL NAVBAR */
 .entre-navbar {
@@ -175,4 +95,3 @@
   opacity: 1;
   color: #38bdf8;
 }
-

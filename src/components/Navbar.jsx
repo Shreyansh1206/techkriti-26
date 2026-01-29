@@ -25,31 +25,14 @@ const Navbar = ({ isLoggedIn }) => {
 
         {/* NAV LINKS */}
         <div className="nav-links">
-          <div onClick={() => document.getElementById('about')?.scrollIntoView()}>
-            About
+          <div onClick={() => navigate('/events/technical')} className="nav-link">
+            Technical
           </div>
-          <div onClick={() => document.getElementById('theme')?.scrollIntoView()}>
-            Theme
+          <div onClick={() => navigate('/events/entrepreneurial')} className="nav-link">
+            Entrepreneurial
           </div>
-          <div onClick={() => document.getElementById('legacy')?.scrollIntoView()}>
-            Legacy
-          </div>
-
-          {/* EVENTS DROPDOWN */}
-          <div className="events-dropdown">
-            <div className="nav-link">Events</div>
-
-            <div className="dropdown-menu">
-              <div onClick={() => navigate('/events/technical')}>
-                Technical
-              </div>
-              <div onClick={() => navigate('/events/entrepreneurial')}>
-                Entrepreneurial
-              </div>
-              <div onClick={() => navigate('/events/miscellaneous')}>
-                Miscellaneous
-              </div>
-            </div>
+          <div onClick={() => navigate('/events/miscellaneous')} className="nav-link">
+            Miscellaneous
           </div>
 
           {/* AUTH BUTTON */}
