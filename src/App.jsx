@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 
 import Home from './pages/Home';
 import Entrepreneurial from './pages/Entrepreneurial';
-import Events from './pages/EventsTechnical';
+import Events from './pages/Technical';
 import Register from './pages/Register';
 import SignIn from './pages/SignIn';
 
