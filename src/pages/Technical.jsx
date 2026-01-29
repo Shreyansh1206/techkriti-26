@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import TechnicalModal from '../components/technical/TechnicalModal';
-import TechnicalNavbar from '../components/technical/TechnicalNavbar';
+import TechnicalNavbar from '../components/technical/technicalNavBar';
 import TechnicalCard from '../components/technical/TechnicalCard';
 import '../components/technical/technical.css';
 
