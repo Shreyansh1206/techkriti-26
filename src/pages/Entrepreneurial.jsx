@@ -2,7 +2,7 @@ import { useState } from 'react';
 import EntrepreneurialCard from '../components/entrepreneurial/EntrepreneurialCard';
 import EntrepreneurialModal from '../components/entrepreneurial/EntrepreneurialModal';
 import '../components/entrepreneurial/entrepreneurial.css';
-import EntrepreneurialNavbar from '../components/entrepreneurial/EntrepreneurialNavbar';
+import EntrepreneurialNavbar from '../components/entrepreneurial/EntrepreneurialNavBar';
 
 
 const Entrepreneurial = () => {
